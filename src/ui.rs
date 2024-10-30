@@ -170,7 +170,7 @@ async fn enrich_download_params(mut args: DownloadParams) -> anyhow::Result<Down
 async fn enrich_dislodge_params(mut args: DislodgeParams) -> anyhow::Result<DislodgeParams> {
     if args.in_path.is_none() {
         let in_path = Text::new("What is the path to your video ?")
-            .with_default("output.avi")
+            .with_default("output.mp4")
             .prompt()
             .unwrap();
         args.in_path = Some(in_path);

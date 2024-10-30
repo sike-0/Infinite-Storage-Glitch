@@ -90,14 +90,14 @@ pub async fn run_embed(args: EmbedParams) -> anyhow::Result<()> {
 
             let data = Data::from_color(bytes, file_name_data);
 
-            etcher::etch("output.avi", data, settings)?;
+            etcher::etch("output.mp4", data, settings)?;
         }
         OutputMode::Binary => {
             let bytes = etcher::rip_bytes(&args.in_path.expect("no path in arguments").clone())?;
             let binary = etcher::rip_binary(bytes)?;
 
             let data = Data::from_binary(binary, file_name_data);
-            etcher::etch("output.avi", data, settings)?;
+            etcher::etch("output.mp4", data, settings)?;
         }
     }
 

@@ -592,7 +592,7 @@ pub fn etch(path: &str, data: Data, settings: Settings) -> anyhow::Result<()> {
     let mut video = match video {
         Ok(v) => v,
         Err(_) => {
-            let fourcc = VideoWriter::fourcc('a', 'v', 'c', '1')?;
+            let fourcc = VideoWriter::fourcc('m', 'p', '4', 'v')?;
             VideoWriter::new(path, fourcc, settings.fps, frame_size, true)
                 .expect("Both png and avc1 codecs failed, please raise an issue on github")
         }

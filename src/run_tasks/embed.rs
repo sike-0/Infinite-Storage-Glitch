@@ -52,7 +52,7 @@ pub async fn run_embed(args: EmbedParams) -> anyhow::Result<()> {
                 "240p" => (426, 240),
                 "360p" => (640, 360),
                 "480p" => (854, 480),
-                "720p" => (1280, 720),
+                "720p" => (720, 1280),
                 _ => (640, 360),
             };
             settings.width = width;
